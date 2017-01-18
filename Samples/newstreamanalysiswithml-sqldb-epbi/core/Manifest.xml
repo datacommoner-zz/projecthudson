@@ -54,6 +54,15 @@
         <Parameter hidden="true" name="sqlServerPassword" defaultValue="{Outputs.sqlServerPassword}" />
       </Parameters>
     </Function>
+    <SolutionDashboard>
+      <Parameters>
+        <Parameter hidden="true" name="pbixFileUrl" defaultValue="{PatternAssetBaseUrl}/dashboards/solution/dashboard.pbix" />
+        <Parameter hidden="true" name="sqlServer" defaultValue="{Outputs.sqlServerName}" />
+        <Parameter hidden="true" name="sqlDatabase" defaultValue="{Outputs.sqlDatabaseName}" />
+        <Parameter hidden="true" name="sqlServerUsername" defaultValue="{Outputs.sqlServerUsername}" />
+        <Parameter hidden="true" name="sqlServerPassword" defaultValue="{Outputs.sqlServerPassword}" />
+      </Parameters>
+    </SolutionDashboard>
     <WebJob title="Copy the Predictive Sentiment Analysis Model from Gallery and deploy as Web Service">
       <Parameters>
         <Parameter name="appName" defaultValue="{Outputs.webJobSiteName}" />
