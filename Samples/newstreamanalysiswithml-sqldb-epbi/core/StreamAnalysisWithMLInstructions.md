@@ -1,4 +1,10 @@
 ## Instructions
+
+Your solution has been successfully deployed!
+
+You can see your dashboard [here]({Outputs.solutionDashboardUrl}).	
+<iframe width="780" height="480" src="{Outputs.solutionDashboardUrl}" frameborder="0" allowfullscreen></iframe>
+
 1. Go [here]({Outputs.saJobOutputsUrl}) and click on the __Outputs__ tile, then click on __PowerBIOutput__, and then click on __Renew authorization__ (Enter your Power BI userid and password) to set up authorization for the Stream Analytics Power BI Output.  Then click on __Save__ to test the connection.
 2. To start/stop your Stream Analytics Job, you may use the START / STOP commands [here]({Outputs.saJobOutputsUrl}).  Choose __Now__ for the Job output start time and click on __Start__. 
 3. Now go to [Power BI Dashboard](https://powerbi.microsoft.com/) and use a Real-time dataset to build reports and dashboards using your data!
