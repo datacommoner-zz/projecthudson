@@ -285,6 +285,7 @@
             "value": "[concat('https://portal.azure.com/#resource/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Sql/servers/', variables('sqlServerName'), '/overview')]"
           },
         "twitterKeywords": { "type": "string", "value": "[parameters('twitterKeywords')]" },
+        "oauthConsumerKeySub": { "type": "string", "value": "[substring(parameters('oauthConsumerKey'),0,7)]" },
         "oauthConsumerKey": { "type": "string", "value": "[parameters('oauthConsumerKey')]" },
         "oauthConsumerSecret": { "type": "string", "value": "[parameters('oauthConsumerSecret')]" },
         "oauthToken": { "type": "string", "value": "[parameters('oauthToken')]" },

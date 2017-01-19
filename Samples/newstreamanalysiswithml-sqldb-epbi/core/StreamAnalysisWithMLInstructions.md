@@ -2,6 +2,8 @@
 
 Your solution has been successfully deployed!
 
+You used your Twitter Application OauthConsumerKey that starts with {Outputs.oauthConsumerKeySub}
+
 You can see your dashboard [here]({Outputs.solutionDashboardUrl}).	
 <iframe width="780" height="480" src="{Outputs.solutionDashboardUrl}" frameborder="0" allowfullscreen></iframe>
 
