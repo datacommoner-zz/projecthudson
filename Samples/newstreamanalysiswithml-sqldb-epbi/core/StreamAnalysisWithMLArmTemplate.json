@@ -113,7 +113,7 @@
         "powerBiRefreshToken": "none",
         "powerBiGroupId": "00000000-0000-0000-0000-000000000000",
         "powerBiWorkspaceName": "My Workspace",
-        "transformQuery": "WITH subquery AS (SELECT text, topic, CreatedAt, sentiment(text) as result from [TwitterStream] WHERE text IS NOT NULL) Select text, topic, CreatedAt, CAST(result.[Score] AS float) as Score Into [PowerBIOutput] From subquery  SELECT * INTO [StreamOutput] FROM [TwitterStream] WHERE text IS NOT NULL",
+        "transformQuery": "WITH subquery AS (SELECT text, topic, CreatedAt, sentiment(text) as result from [TwitterStream] WHERE text IS NOT NULL) Select text, topic, createdAt, CAST(result.[score] AS float) as Score Into [SQLOutput] From subquery  SELECT * INTO [StreamOutput] FROM [TwitterStream] WHERE text IS NOT NULL",
         "sfVersion": "2016-03-01",
         "wsVersion": "2016-03-01",
         "webJobName": "TwitterClient",
@@ -249,30 +249,13 @@
                                     "Database": "[variables('sqlDatabaseName')]",
                                     "Password": "[variables('sqlServerPassword')]",
                                     "Server": "[variables('sqlServerName')]",
-                                    "Table": "Tweets",
+                                    "Table": "TweetScore",
                                     "User": "[variables('sqlServerUsername')]"
                                    },
                                     "Type": "Microsoft.Sql/Server/Database"
                                 }
                             }
-                        },
-                    {
-                        "Name": "PowerBIOutput",
-                        "Properties": {
-                            "DataSource": {
-                                "Properties": {
-                                    "dataset": "[concat(resourceGroup().name, 'Dataset')]",
-                                    "table": "TwitterSentiment",
-                                    "refreshToken": "[variables('powerBiRefreshToken')]",
-                                    "tokenUserPrincipalName": "[parameters('powerBiUserId')]",
-                                    "tokenUserDisplayName": "[parameters('powerBiUserDisplayName')]",
-                                    "groupId": "[variables('powerBiGroupId')]",
-                                    "groupName": "[variables('powerBiWorkspaceName')]"
-                                },
-                                "Type": "PowerBI"
-                            }
                         }
-                    }
                 ],
                 "Transformation": {
                     "Name": "AllToBlob",

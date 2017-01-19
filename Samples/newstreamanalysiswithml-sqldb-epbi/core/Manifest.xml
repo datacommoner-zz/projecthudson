@@ -10,6 +10,8 @@
   <Summary src="StreamAnalysisWithMLSummary.md" format="markdown"/>
   <Prerequisites src="Prereqs.md" format="markdown"/>
   <EstimatedTime>10 Minutes</EstimatedTime>
+   <TryItNow landscapeDashboardPath="{PatternAssetBaseUrl/dashboards/TryItNow/ConnectedCarsPbiReport-sample-landscape.pbix"
+            portraitDashboardPath="{PatternAssetBaseUrl}/dashboards/TryItNow/ConnectedCarsPbiReport-sample-portrait.pbix" />
   <Ingredients>
     <Ingredient>Web</Ingredient>
     <Ingredient>EventHub</Ingredient>
@@ -56,7 +58,7 @@
     </Function>
     <SolutionDashboard>
       <Parameters>
-        <Parameter hidden="true" name="pbixFileUrl" defaultValue="{PatternAssetBaseUrl}/dashboards/solution/dashboard.pbix" />
+        <Parameter hidden="true" name="pbixFileUrl" defaultValue="{PatternAssetBaseUrl}/dashboards/solution/StreamingTweets.pbix" />
         <Parameter hidden="true" name="sqlServer" defaultValue="{Outputs.sqlServerName}" />
         <Parameter hidden="true" name="sqlDatabase" defaultValue="{Outputs.sqlDatabaseName}" />
         <Parameter hidden="true" name="sqlServerUsername" defaultValue="{Outputs.sqlServerUsername}" />

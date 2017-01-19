@@ -8,7 +8,7 @@ You can see your dashboard [here]({Outputs.solutionDashboardUrl}).
 1. Go [here]({Outputs.saJobOutputsUrl}) and click on the __Outputs__ tile, then click on __PowerBIOutput__, and then click on __Renew authorization__ (Enter your Power BI userid and password) to set up authorization for the Stream Analytics Power BI Output.  Then click on __Save__ to test the connection.
 2. To start/stop your Stream Analytics Job, you may use the START / STOP commands [here]({Outputs.saJobOutputsUrl}).  Choose __Now__ for the Job output start time and click on __Start__. 
 3. Now go to [Power BI Dashboard](https://powerbi.microsoft.com/) and use a Real-time dataset to build reports and dashboards using your data!
-4. If you don't have a Work or school account that provides access to the Power BI Portal download this Power BI Desktop pbix file [here]({PatternAssetBaseUrl}/StreamingTweets2.pbix) to connect to your Storage account
+4. If you don't have a Work or school account that provides access to the Power BI Portal download this Power BI Desktop pbix file [here]({PatternAssetBaseUrl}/dashboards/TryItNow/StreamingTweets2.pbix) to connect to your Storage account
    > **Note**: If you are downloading using an Edge Browser the .pbix file extension might change to .zip and you will need to modify the extension to .pbix to open the file in Power BI Desktop
 5. Click [here]({Outputs.storageAccountUrl}) to view your Storage account on the Azure portal to get the Storage account name and access key
 6. Azure SQL Database
@@ -16,7 +16,7 @@ You can see your dashboard [here]({Outputs.solutionDashboardUrl}).
     Azure SQL database is used to save the data and forecast results. You can use the following credentials to log in your database and check the results.
 		
     * Server: {Outputs.sqlServerName}.database.windows.net
-    * Database: {Outputs.databaseName}
+    * Database: {Outputs.sqlDatabaseName}
     * Username: {Outputs.sqlServerUsername}
     * Password: You can manage your SQL server password from [Azure portal]({Outputs.sqlServerUrl})
 7. Open the Power BI Desktop report and choose Edit Queries > Data Source Settings > Change Source and then paste the Storage account name and Click OK

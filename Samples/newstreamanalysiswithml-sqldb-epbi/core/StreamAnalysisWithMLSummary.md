@@ -1,5 +1,7 @@
 [![Solution Diagram]({PatternAssetBaseUrl}/StreamAnalysisWithMLDiagram.JPG)]({PatternAssetBaseUrl}/StreamAnalysisWithMLDiagram.JPG)
 
+The path for [TryItNow](https://start.cortanaintelligence.com/tryitnow/dashboard/newstreamanalysiswithml).  Note the Tutorial needs to be deployed as an official CIQS Tutorial for the TryItNow link to work.
+
 This solution sets up the infrastructure in the diagram above. The various steps are as follows:
 
 * Setting up an Azure WebJob to collect Twitter data based on user specified keywords.

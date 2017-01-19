@@ -40,3 +40,13 @@ INSERT INTO [dbo].[SolutionData] VALUES
 	(dateadd(hour, -12, getdate()), 'Pressure Reading', 1.3)
 ;
 GO
+IF NOT EXISTS(SELECT name from sys.tables WHERE name = N'TweetScore')
+BEGIN
+CREATE TABLE [dbo].[TweetScore](
+	[text] [varchar](200) NOT NULL,
+	[topic] [varchar](100) NOT NULL,
+	[createdAt] [datetime] NOT NULL,
+	[score] [float] NOT NULL
+)    
+END
+GO
